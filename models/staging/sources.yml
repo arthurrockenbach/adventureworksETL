@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: adventureworks
+    description: This is a replica of the Postgres database used by our Client
+    tables:
+      - name : address
+      - name : countryregion
+      - name : creditcard
+      - name : customer
+      - name : person
+      - name : personcreditcard
+      - name : product
+      - name : stateprovince
+      - name : productlistpricehistory
+      - name : salesorderdetail
+      - name : salesorderheader
+      - name : salesorderheadersalesreason
+      - name : salesreason
+      - name : shoppingcartitem
+      - name : businessentitycontact
+      - name : salesterritory
+      - name : store

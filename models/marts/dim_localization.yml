@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_localization
+    description: This is the Localization Dimension Table, contains information about the client's address.
+    columns:
+      - name: address_sk
+        description: The primary key of the localization dim
+        tests:
+          - unique
+          - not_null
+       
+      - name: addressid
+        description: The natural key of the localization dim
+      
+      - name: countryname
+        description: The name of the Country
+       
+      - name: statename
+        description: Name of the State
+
+      - name: city
+        description: The name of the city 
+        
+      - name: postalcode
+        description: The client's postal code

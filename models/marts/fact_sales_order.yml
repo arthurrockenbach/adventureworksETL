@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: fact_sales_order
+    description: This is the fact sales order table, this table contains information about the sales orders. 
+    columns:
+      - name: salesorderid
+        description: The primary key of the fact_sales_order
+        tests:
+          - not_null 
+         
+      - name: customer_fk
+        description: the foreign key of the fact_sales_order
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_sk 
+
+      - name: product_fk
+        description: the foreign key of the fact_sales_order
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: product_sk
+
+      - name: creditcard_fk
+        description: the foreign key of the fact_sales_order
+        tests:
+          - relationships:
+              to: ref('dim_creditcard')
+              field: creditcard_sk
+
+      - name: address_fk
+        description: the foreign key of the fact_sales_order
+        tests:
+          - relationships:
+              to: ref('dim_localization')
+              field: address_sk
+
+      - name: salesreason_fk
+        description: the foreign key of the fact_sales_order
+        tests:
+          - relationships:
+              to: ref('dim_salesreason')
+              field: salesreason_sk
+
+      - name: orderqty
+        description: The amount bought on the order
+
+      - name: unitprice
+        description: The total paid on the order
+
+      - name: orderdate
+        description: The date of the order
+      
+      - name: status
+        description: The status of the order 
+       
+       
+       
+       

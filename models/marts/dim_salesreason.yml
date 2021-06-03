@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_salesreason
+    description: This table is the Sales Reason Dimensions that contains information about the sales reasons.
+    columns:
+      - name: salesreason_sk
+        description: The primary key of the salesreason
+        tests:
+          - unique
+          - not_null
+      - name: salesorderid
+        description: The foreign key of the salesreason
+      
+      - name: salesreasonid
+        description: The natural key of the salesreason
+      
+      - name: salesreason
+        description: The sales reason
+      
+      

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: This is the Customer Dimension Table, contains information about the clients.
+    columns:
+      - name: customer_sk
+        description: The primary key of the customer
+        tests:
+          - unique
+          - not_null
+      - name: customerid
+        description: The natural key of the customer
+

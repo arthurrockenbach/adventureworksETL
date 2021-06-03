@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_creditcard
+    description: This is the Credit Card Dimension Table, this table includes information about the credit card and credit card's owners.
+    columns:
+      - name: creditcard_sk
+        description: The primary key of the creditcard
+        tests:
+          - unique
+          - not_null
+       
+      - name: creditcard_sk
+        description: The primary key of the creditcard
+      
+      - name: creditcardid
+        description: The natural key of the creditcard
+       
+      - name: firstname
+        description: The client's first name
+
+      - name: lastname
+        description: The client's last name
+        
+      - name: cardtype
+        description: The client's card type
+
+      
+      
+      
